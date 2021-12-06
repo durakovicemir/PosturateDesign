@@ -1,6 +1,6 @@
 body{
     --width: 400px;
-    --height: 475px;
+    --height: 525px;
     width: var(--width);
     height: var(--height);
     /*border-radius: 10%;*/
@@ -13,7 +13,7 @@ body{
 }
 .background {
     background-image: linear-gradient(to bottom right, #c0e9ef, #d0a4ff);
-    height: 475px;
+    height: 525px;
 }
 #title a{
     font-family: 'Open Sans', sans-serif;
@@ -260,4 +260,14 @@ body{
 #breekTimer:invalid ~ .tooltiptext{
     visibility: visible;
     border: black 5px solid;
+}
+
+.mainHead > div > label {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+#displayTimer {
+    color: white;
+    font-family: 'Open Sans', sans-serif;
 }
