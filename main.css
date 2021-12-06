@@ -1,0 +1,263 @@
+body{
+    --width: 400px;
+    --height: 475px;
+    width: var(--width);
+    height: var(--height);
+    /*border-radius: 10%;*/
+    color: black;
+    position: relative;
+    border: #DDDDDD 2px solid;
+    margin: 0;
+    background-color: white;
+
+}
+.background {
+    background-image: linear-gradient(to bottom right, #c0e9ef, #d0a4ff);
+    height: 475px;
+}
+#title a{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 28px;
+    color: white;
+    font-weight: 1000;
+    text-align: left;
+    text-decoration: none;
+    /*background-color: dodgerblue;*/
+}
+
+#title a:hover {
+    transition: ease-in 0.25s;
+    color: #fc90af;
+}
+
+#bg {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    border: #DDDDDD 2px solid;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu{
+    --bgColor: blue;
+    background-color: var(--bgColor);
+    padding: 15px;
+    display: flex;
+    min-height: 38px;
+}
+.menu button{
+    font-size: 25px;
+    width: 50%;
+    background-color: var(--bgColor);
+    border: none;
+    color: white;
+}
+.menu button:hover{
+    background-color: darkblue;
+    border: black 3px solid;
+    font-weight: bold;
+    transition: background-color 600ms ease, 
+                border 100ms ease;  
+}
+#menu-seperate{
+    font-size: 25px;
+    font-weight: 500;
+}
+.cameraScreen{
+    text-align: center;
+}
+
+#toggleCam{
+    margin-top: 5px;
+    border-radius: 15px;
+    color: white;
+    background-color: #2e36aa;
+    border: none;
+    height: 30px;
+    width: 150px;
+    font-size: 20px;
+    cursor: pointer;
+}
+#toggleCam:hover{
+    color: #fc90af;
+    transition: ease-in 0.25s;
+    background-color: white;
+}
+
+/* Start of checkToggle Code*/
+.toggle{
+    position: absolute;
+    bottom: 45px;
+    margin-left: 10px;
+}
+.switch{
+    font-size: 20px;
+    display: inline-block;
+    cursor: pointer;
+    font-family: 'Open Sans';
+}
+.switch_input{
+    display: none;
+}
+.switch_fill{
+    position: relative;
+    background: #fc90af;
+    transition: background 1.5s;
+    border-radius: 50px;
+    color: white;
+}
+.switch_input:checked ~ .switch_fill{
+    background: #2e36aa;
+}
+.switch_fill::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 50%;
+    border-radius: 50px;
+    background: white;
+    box-shadow: 0 0 10px rgb(0 0 0 / 25%);
+    transition: transform 0.5s;
+}
+.switch_input:checked ~ .switch_fill::after{
+    transform: translateX(100%);
+}
+/* End of checkToggle Code */
+.timeBtns{
+    position: absolute;
+    bottom: 65px;
+    right: 0;
+    margin-right: 10px;
+}
+.timeBtns button{
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: #2e36aa;
+    height: 30px;
+    width: 120px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.timeBtns button:hover{
+    color: #fc90af;
+    background-color: white;
+    transition: ease-in 0.25s;
+    /*background-color: black;*/
+}
+#timerContent{
+    /*background-color: rgba(136, 140, 161, 0.9);*/
+    text-align: center;
+    height: auto;
+    max-height: 0px;
+    overflow: hidden;
+    font-size: 20px;
+    transition: max-height 2s ease;
+}
+.mainHead{
+    display: grid;
+    text-align: center;
+    width: fit-content;
+    margin-left: 10px;
+    margin-right: auto;
+}
+.mainHead div, .content{
+    margin-top: 5px;
+}
+.exerciseTimer {
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: 'Open Sans';
+    color: white;
+    align-items: left;
+    font-weight: 1000;
+
+}
+
+.exerciseBreak {
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: 'Open Sans';
+    color: white;
+    align-items: left;
+    font-weight: 1000;
+}
+
+.exerciseTimer > div{
+    display: grid;
+    width: fit-content;
+    margin-left: 10px;
+    margin-right: 10px;
+    border: 2px black;
+    border-radius: 20px;
+    text-align: left;
+    /*border: black 3px solid;*/
+    padding: 0px;
+    align-items: left;
+    margin-top: 0%;
+}
+.exerciseTimer > div > select{
+    width: 108.4%;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+}
+
+/*.exerciseTimer > div > select:hover {
+    width: 100%;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 5px;
+    background-color: white;
+    transition: ease-in 0.25s;
+    color: #fc90af;
+    border: none;
+}*/
+
+.exerciseBreak > input {
+    height: 20px;
+    width: 98.4%;
+    border: none;
+    border-radius: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+.tooltiptext {
+    visibility: hidden;
+    background-color: white;
+    color: red;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: relative;
+    z-index: 1;
+    margin-top: 5px;
+    font-size: 15px;
+}
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent black transparent;
+}
+#breekTimer:invalid{
+    background-color: red;
+}
+#breekTimer:invalid ~ .tooltiptext{
+    visibility: visible;
+    border: black 5px solid;
+}

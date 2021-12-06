@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./main.css">   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posturate</title>
+</head>
+<body>
+    <div class="background">
+        <div class="heading">
+            <!--got rid of navigation bar as it is not needed-->
+            <div class="mainHead">
+                <!-- <video id="video2" autoplay></video> -->
+                <div id="title"><a target="_blank" href="https://melone0403.github.io/postureGuruWeb/" id="postureWebsite">Posturate</a></div>
+                <div id="timerContent">
+                    <label for="displayTimer" id="timeLabel">Work Timer: </label>
+                    <div id="displayTimer">
+                        00:00:00
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="cameraScreen">  
+                <img id="bg" src="">
+                <button id="toggleCam"></button>
+            </div>
+            <div class = 'video'>
+                <img id="image">
+            </div>
+            <div class="exerciseTimer">
+                <div class="exerciseFreq">
+                    <label for="break" id="everyTime">Choose Work Amount (in minutes): </label> 
+                    <select id="breakFreq">
+                        <option value="noTime" selected>No Time Selected</option>
+                        <option value="15">15</option>
+                        <option value="30">30</option>
+                        <option value="45">45</option>
+                        <option value="00">60</option>
+                    </select>
+                </div>
+                <div class="exerciseBreak">
+                    <label for="break" id="everyTime">Choose Break Time: </label> 
+                    <input name="num" type="number" min="0" step="1" max="60" id="breekTimer" title="Enter Only Numbers From 0 - 60" value="15" list="restTime" required>
+                    <!-- <datalist id="restTime">
+                        <option>15</option>
+                        <option>30</option>
+                        <option>45</option>
+                        <option>60</option>
+                    </datalist> -->
+                    <span class="tooltiptext" id="tooltiptext">Enter A Valid Number from 0 to 60 (no decimals)</span>
+                    <!-- <select id="breakTimer">
+                        <option value="noTime" selected>No Time Selected</option>
+                        <option value="15">15</option>
+                        <option value="30">30</option>
+                        <option value="45">45</option>
+                        <option value="00">60</option>
+                    </select> -->
+                </div>
+            </div>
+            
+            <div class="toggle">
+                <label class="switch" for="mySwitch">
+                    <input class="switch_input" type="checkbox" id="mySwitch">
+                    <div class="switch_fill"><p>&nbsp; On &nbsp; &nbsp; &nbsp; Off &nbsp;</p></div>
+                </label>
+            </div>
+            <div class="timeBtns">
+                <button id="startStop">Start</button> <button id="reset">Reset</button>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./main.js"></script>
+</body>
+</html>
